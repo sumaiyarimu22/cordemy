@@ -1,6 +1,5 @@
 import { currencyConverter } from "@/utils/currencyConverter";
 import Image from "next/image";
-import Link from "next/link";
 import { BsFillStarFill } from "react-icons/bs";
 import Button from "./Button";
 
@@ -19,7 +18,7 @@ const CourseItem = ({ course }) => {
       </div>
 
       <div className="p-5 space-y-2">
-        <h3 className="text-3xl font-medium">{course.title}</h3>
+        <h3 className="text-3xl font-medium h-16">{course.title}</h3>
         <p className="flex justify-between text-gray-500">
           <span>
             by
