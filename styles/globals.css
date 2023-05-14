@@ -6,3 +6,6 @@
 .wrapper {
   @apply container mx-auto px-5 lg:px-0;
 }
+.inputStyle {
+  @apply bg-transparent border placeholder:text-white py-4 px-24 rounded-lg outline-none focus:border-black duration-500 w-full lg:w-1/2;
+}
