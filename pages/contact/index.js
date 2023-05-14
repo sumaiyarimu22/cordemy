@@ -1,9 +1,27 @@
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 const ContactPage = () => {
+  const formRef = useRef(null);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     //email js integration
-
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLE_ID,
+        formRef.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_ID
+      )
+      .then(
+        () => {
+          console.log("message sent");
+        },
+        () => {
+          console.log("message not sent");
+        }
+      );
     //reset
     e.target.querySelector(".fullName").value = "";
     e.target.querySelector(".email").value = "";
@@ -11,9 +29,13 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="py-20 bg-gray-400 text-white">
+    <div className="py-20  text-gray-500">
       <h1 className="text-3xl font-bold text-center">Contact</h1>
-      <form onSubmit={sendEmail} className="mt-10 wrapper flex flex-col gap-8">
+      <form
+        onSubmit={sendEmail}
+        className="mt-10 wrapper flex flex-col gap-8"
+        ref={formRef}
+      >
         <div className="form-control flex justify-center items-center">
           <input
             type="text"
@@ -43,9 +65,8 @@ const ContactPage = () => {
         <div className="form-control flex justify-center items-center">
           <input
             type="submit"
-            className="inputStyle  hover:bg-black/80 tracking-widest"
-            value="send"
-            placeholder="Send Message"
+            className="inputStyle hover:bg-gray-600/80 hover:text-white tracking-widest"
+            value="send message"
           />
         </div>
       </form>
