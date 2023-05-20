@@ -29,7 +29,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="py-20  text-gray-500">
+    <div className="py-20  text-gray-800">
       <h1 className="text-3xl font-bold text-center">Contact</h1>
       <form
         onSubmit={sendEmail}
@@ -65,7 +65,7 @@ const ContactPage = () => {
         <div className="form-control flex justify-center items-center">
           <input
             type="submit"
-            className="inputStyle hover:bg-gray-600/80 hover:text-white tracking-widest"
+            className="inputStyle hover:bg-gray-600/80 bg-gray-500  hover:text-white tracking-widest"
             value="send message"
           />
         </div>
