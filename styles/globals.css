@@ -9,3 +9,9 @@
 .inputStyle {
   @apply bg-transparent border border-gray-300 placeholder:text-gray-400  py-4 px-10 rounded-lg outline-none focus:border-gray-500 duration-500 w-full lg:w-1/2;
 }
+.form-control {
+  @apply cursor-pointer flex flex-col gap-2;
+}
+.form-control input {
+  @apply outline-none border py-3 px-4 rounded-lg focus:border-gray-700;
+}
