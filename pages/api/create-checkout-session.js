@@ -1,7 +1,8 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 async function createStripeCheckout(req, res) {
-  const { items, name, email, mobile, address, courseTitle } = req.body;
+  const { items, name, email, mobile, address, courseTitle, courseId } =
+    req.body;
   const transformItems = items.map((item) => ({
     quantity: 1,
     price_data: {
@@ -26,6 +27,7 @@ async function createStripeCheckout(req, res) {
       mobile,
       address,
       courseTitle,
+      courseId,
       images: JSON.stringify(items.map((item) => item.cover)),
     },
   });
