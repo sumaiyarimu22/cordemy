@@ -13,7 +13,7 @@ const buttonVariants = cva(
         danger: "bg-rose-500 text-white hover:bg-rose-600",
       },
       size: {
-        default: "py-3 px-5",
+        default: "py-2 px-5",
         full: "py-3 w-full",
       },
     },
