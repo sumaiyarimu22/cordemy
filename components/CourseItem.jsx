@@ -5,8 +5,12 @@ import Button from "./Button";
 
 const CourseItem = ({ course }) => {
   return (
-    <div className="w-full lg:w-[28rem] shadow-md rounded-md overflow-hidden">
-      <div className="w-full h-[23rem] lg:h-[18rem] overflow-hidden">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className="w-full lg:w-[22rem] hover:shadow-md shadow-sm rounded-md overflow-hidden"
+    >
+      <div className="w-full h-[20rem] lg:h-[14rem] overflow-hidden">
         <Image
           src={course.cover}
           alt={course.title}
@@ -18,7 +22,7 @@ const CourseItem = ({ course }) => {
       </div>
 
       <div className="p-5 space-y-2">
-        <h3 className="text-3xl font-medium h-16">{course.title}</h3>
+        <h3 className="text-2xl font-bold h-16">{course.title}</h3>
         <p className="flex justify-between text-gray-500">
           <span>
             by
@@ -34,7 +38,9 @@ const CourseItem = ({ course }) => {
         <p className="flex justify-between text-gray-500">
           <span>
             Enrolled student's:{" "}
-            <span className="text-black font-semibold">{course.students}</span>
+            <span className="text-black/70 font-semibold">
+              {course.students}
+            </span>
           </span>
           <span className="flex items-center gap-1">
             <BsFillStarFill className="text-amber-500" />
@@ -42,7 +48,7 @@ const CourseItem = ({ course }) => {
           </span>
         </p>
         <p className="text-gray-500">
-          {course.description.substring(0, 120)}...
+          {course.description.substring(0, 70)}...
         </p>
         <div className="flex justify-between items-center">
           <p className="text-lg font-semibold">

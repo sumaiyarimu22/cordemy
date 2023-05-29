@@ -1,9 +1,11 @@
 import { getAllCourses } from "@/prisma/courses";
 import CoursesPage from "./courses";
+import HeroSection from "@/components/HeroSection";
 
 const HomePage = ({ courses }) => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
+      <HeroSection />
       <CoursesPage courses={courses} />
     </div>
   );

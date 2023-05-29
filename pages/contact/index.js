@@ -30,7 +30,13 @@ const ContactPage = () => {
 
   return (
     <div className="py-20  text-gray-800">
-      <h1 className="text-3xl font-bold text-center">Contact</h1>
+      <h1
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        className="text-3xl font-bold text-center"
+      >
+        Contact
+      </h1>
       <form
         onSubmit={sendEmail}
         className="mt-10 wrapper flex flex-col gap-8"
@@ -38,6 +44,8 @@ const ContactPage = () => {
       >
         <div className="form-control flex justify-center items-center">
           <input
+            data-aos="fade-left"
+            data-aos-duration="1000"
             type="text"
             className="fullName  inputStyle"
             name="fullName"
@@ -47,6 +55,8 @@ const ContactPage = () => {
         </div>
         <div className="form-control flex justify-center items-center">
           <input
+            data-aos="fade-right"
+            data-aos-duration="1000"
             type="email"
             className="inputStyle email"
             name="email"
@@ -56,6 +66,8 @@ const ContactPage = () => {
         </div>
         <div className="form-control flex justify-center items-center">
           <textarea
+            data-aos="fade-left"
+            data-aos-duration="1000"
             className="inputStyle resize-none message"
             name="message"
             placeholder="Write your message"
@@ -64,6 +76,8 @@ const ContactPage = () => {
         </div>
         <div className="form-control flex justify-center items-center">
           <input
+            data-aos="fade-right"
+            data-aos-duration="1000"
             type="submit"
             className="inputStyle hover:bg-gray-600/80 bg-gray-500  hover:text-white tracking-widest"
             value="send message"

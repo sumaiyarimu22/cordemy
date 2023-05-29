@@ -20,13 +20,21 @@ const OrdersPage = ({ session, customer }) => {
 
   return (
     <div className="wrapper py-10 min-h-screen">
-      <h2 className="text-3xl mb-5">
+      <h2
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        className="text-3xl mb-5"
+      >
         You enrolled :
         <span className="font-semibold"> {customer.orders.length}</span> course
         {customer.orders.length > 1 ? "s" : ""}😊
       </h2>
 
-      <div className="courses flex flex-wrap gap-10">
+      <div
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        className="courses flex flex-wrap gap-10"
+      >
         {customer.orders.map((course) => (
           <div
             key={course.id}
