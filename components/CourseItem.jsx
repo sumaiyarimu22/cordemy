@@ -8,9 +8,9 @@ const CourseItem = ({ course }) => {
     <div
       data-aos="fade-up"
       data-aos-duration="1000"
-      className="w-full lg:w-[22rem] hover:shadow-md shadow-sm rounded-md overflow-hidden"
+      className="w-full lg:w-[18rem] hover:shadow-md shadow-sm rounded-md overflow-hidden"
     >
-      <div className="w-full h-[20rem] lg:h-[14rem] overflow-hidden">
+      <div className="w-full h-[20rem] lg:h-[12rem] overflow-hidden">
         <Image
           src={course.cover}
           alt={course.title}
@@ -37,7 +37,7 @@ const CourseItem = ({ course }) => {
         </p>
         <p className="flex justify-between text-gray-500">
           <span>
-            Enrolled student's:{" "}
+            {`  Enrolled student's:`}
             <span className="text-black/70 font-semibold">
               {course.students}
             </span>

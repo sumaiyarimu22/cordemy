@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 
 const HomePage = ({ courses }) => {
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <HeroSection />
       <CoursesPage courses={courses} />
     </div>
