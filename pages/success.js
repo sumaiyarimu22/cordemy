@@ -4,14 +4,14 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
-const successPage = ({ session }) => {
+const SuccessPage = ({ session }) => {
   const router = useRouter();
 
   useEffect(() => {
     if (!session) {
       router.replace("/users/login");
     }
-  }, [router, session]);
+  }, [session, router]);
 
   if (!session) {
     return null;
@@ -24,7 +24,7 @@ const successPage = ({ session }) => {
           <span className="text-emerald-500">
             <AiOutlineCheckCircle />
           </span>
-          You've enrolled successfully
+          {` You've enrolled successfully`}
         </h2>
         <Button href="/orders" placeholder="Got to your orders" />
       </div>
@@ -32,7 +32,7 @@ const successPage = ({ session }) => {
   );
 };
 
-export default successPage;
+export default SuccessPage;
 export const getServerSideProps = async (context) => {
   const session = await getSession(context);
 
