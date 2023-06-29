@@ -39,4 +39,4 @@ To install and run the Cordemy project locally, follow the steps below:
 
 Make sure to set up the necessary environment variables in the **`.env`** file. Refer to the **`.env.example`** file for the required variables.
 
-Feel free to explore the platform, browse courses, and make use of the various features Cordemy has to offer!
+Feel free to explore the platform, browse courses, and make use of the various features 
