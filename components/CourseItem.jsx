@@ -8,7 +8,7 @@ const CourseItem = ({ course }) => {
     <div
       data-aos="fade-up"
       data-aos-duration="1000"
-      className="w-full lg:w-[18rem] hover:shadow-md shadow-sm rounded-md overflow-hidden"
+      className="w-full lg:w-[28rem] hover:shadow-md shadow-sm rounded-md overflow-hidden"
     >
       <div className="w-full h-[20rem] lg:h-[12rem] overflow-hidden">
         <Image
